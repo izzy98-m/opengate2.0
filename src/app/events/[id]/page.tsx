@@ -30,8 +30,8 @@ const socialIcons = {
 };
 
 
-export default function EventPage({ params }: EventPageProps) {
-  const event = events.find(e => e.id === params.id);
+export default function EventPage({ params: { id } }: EventPageProps) {
+  const event = events.find(e => e.id === id);
   const [live, setLive] = useState(false);
   const [over, setOver] = useState(false);
 
@@ -196,5 +196,3 @@ export default function EventPage({ params }: EventPageProps) {
     </div>
   );
 }
-
-    

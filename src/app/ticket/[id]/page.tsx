@@ -17,8 +17,8 @@ interface TicketPageProps {
   };
 }
 
-export default function TicketPage({ params }: TicketPageProps) {
-  const event = events.find(e => e.id === params.id);
+export default function TicketPage({ params: { id } }: TicketPageProps) {
+  const event = events.find(e => e.id === id);
   const [qrCodeUrl, setQrCodeUrl] = useState<string | null>(null);
 
   useEffect(() => {

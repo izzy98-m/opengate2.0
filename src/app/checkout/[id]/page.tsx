@@ -24,8 +24,8 @@ const TICKET_PRICE = 120.00;
 const FEES = 15.50;
 const INSURANCE_PRICE = 9.99;
 
-export default function CheckoutPage({ params }: CheckoutPageProps) {
-  const event = events.find(e => e.id === params.id);
+export default function CheckoutPage({ params: { id } }: CheckoutPageProps) {
+  const event = events.find(e => e.id === id);
   const [addInsurance, setAddInsurance] = useState(false);
   const [splitEmails, setSplitEmails] = useState(['']);
 
@@ -154,4 +154,3 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
     </div>
   );
 }
-
