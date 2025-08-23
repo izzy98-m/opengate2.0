@@ -12,6 +12,24 @@ export interface SeatingMapData {
   sections: SeatingSection[];
 }
 
+export interface Artist {
+  name: string;
+  bio: string;
+  socials: {
+    spotify?: string;
+    instagram?: string;
+    twitter?: string;
+    website?: string;
+  };
+}
+
+export interface MerchandiseItem {
+  id: string;
+  name: string;
+  price: string;
+  image: string;
+}
+
 export interface Event {
   id: string;
   name: string;
@@ -22,4 +40,6 @@ export interface Event {
   longDescription: string;
   image: string;
   seatingMap?: SeatingMapData;
+  artist?: Artist;
+  merchandise?: MerchandiseItem[];
 }

@@ -46,6 +46,21 @@ export const events: Event[] = [
     longDescription: 'Join Cosmic Gate for their Interstellar Tour for a night of mind-bending electronic music. With a career spanning over two decades, they continue to push the boundaries of the genre. This show will feature their classic hits along with new material, accompanied by a stunning visual production.',
     image: 'https://placehold.co/800x450.png',
     seatingMap: createSeatingMap(35),
+    artist: {
+      name: 'Cosmic Gate',
+      bio: 'Cosmic Gate is a German DJ and record production duo, consisting of Claus Terhoeven and Stefan Bossems. They are renowned for their influential contributions to the trance music genre.',
+      socials: {
+        spotify: 'https://open.spotify.com/artist/6ySxYu68zTsO5ghsThpGtY',
+        instagram: 'https://www.instagram.com/realcosmicgate',
+        twitter: 'https://twitter.com/cosmicgate',
+        website: 'https://cosmic-gate.de/',
+      },
+    },
+    merchandise: [
+      { id: 'm1', name: 'Interstellar Tour T-Shirt', price: '$35.00', image: 'https://placehold.co/300x300.png' },
+      { id: 'm2', name: 'Signed Vinyl Record', price: '$75.00', image: 'https://placehold.co/300x300.png' },
+      { id: 'm3', name: 'Cosmic Gate Beanie', price: '$25.00', image: 'https://placehold.co/300x300.png' },
+    ],
   },
   {
     id: '2',
