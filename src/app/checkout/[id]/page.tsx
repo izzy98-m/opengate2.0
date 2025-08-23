@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { events } from '@/lib/data';
@@ -57,8 +58,10 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
                         <span>$135.50</span>
                     </div>
                 </div>
-                 <Button size="lg" className="w-full mt-6 bg-primary hover:bg-primary/90 font-bold">
-                    Proceed to Payment
+                 <Button size="lg" className="w-full mt-6 bg-primary hover:bg-primary/90 font-bold" asChild>
+                    <Link href={`/ticket/${event.id}`}>
+                        Confirm Purchase
+                    </Link>
                 </Button>
                 <p className="text-xs text-center text-muted-foreground mt-3">
                     This is a demo. No real payment will be processed.
