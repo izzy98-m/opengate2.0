@@ -1,3 +1,4 @@
+
 import type { Event, SeatingMapData } from './types';
 
 function createSeatingMap(takenSeats: number = 20): SeatingMapData {
@@ -57,9 +58,9 @@ export const events: Event[] = [
       },
     },
     merchandise: [
-      { id: 'm1', name: 'Interstellar Tour T-Shirt', price: '$35.00', image: 'https://placehold.co/300x300.png' },
-      { id: 'm2', name: 'Signed Vinyl Record', price: '$75.00', image: 'https://placehold.co/300x300.png' },
-      { id: 'm3', name: 'Cosmic Gate Beanie', price: '$25.00', image: 'https://placehold.co/300x300.png' },
+      { id: 'm1-1', name: 'Interstellar Tour T-Shirt', price: '$35.00', image: 'https://placehold.co/300x300.png' },
+      { id: 'm1-2', name: 'Signed Vinyl Record', price: '$75.00', image: 'https://placehold.co/300x300.png' },
+      { id: 'm1-3', name: 'Cosmic Gate Beanie', price: '$25.00', image: 'https://placehold.co/300x300.png' },
     ],
   },
   {
@@ -71,6 +72,11 @@ export const events: Event[] = [
     description: 'A showcase of the most innovative contemporary artists.',
     longDescription: 'The Metropolis Modern Art Fair brings together galleries and artists from around the world. Discover new talent, attend artist talks, and acquire unique pieces for your collection. The fair features a wide range of media, from painting and sculpture to digital art and performance.',
     image: 'https://placehold.co/800x450.png',
+    merchandise: [
+      { id: 'm2-1', name: 'Official Fair Poster', price: '$25.00', image: 'https://placehold.co/300x300.png' },
+      { id: 'm2-2', name: 'Artisan-Crafted Tote Bag', price: '$40.00', image: 'https://placehold.co/300x300.png' },
+      { id: 'm2-3', name: 'Exhibition Catalogue', price: '$60.00', image: 'https://placehold.co/300x300.png' },
+    ],
   },
   {
     id: '3',
@@ -82,6 +88,17 @@ export const events: Event[] = [
     longDescription: 'Get ready to laugh until you cry at The Laughing Factory\'s weekly Comedy Gala. Every Friday, we bring you a new lineup of established stars and rising talents from the world of stand-up comedy. It\'s the perfect way to kick off your weekend.',
     image: 'https://placehold.co/800x450.png',
     seatingMap: createSeatingMap(50),
+    artist: {
+      name: 'A-List Comedians',
+      bio: 'The Laughing Factory features a rotating lineup of nationally acclaimed comedians. Check our website for this week\'s performers.',
+      socials: {
+        website: 'https://www.laughfactory.com/',
+      },
+    },
+    merchandise: [
+      { id: 'm3-1', name: '"I\'m a Joke" T-Shirt', price: '$25.00', image: 'https://placehold.co/300x300.png' },
+      { id: 'm3-2', name: 'Comedy Gala Mug', price: '$15.00', image: 'https://placehold.co/300x300.png' },
+    ],
   },
   {
     id: '4',
@@ -92,8 +109,13 @@ export const events: Event[] = [
     description: 'Savor artisanal foods and fine wines from local producers.',
     longDescription: 'A celebration of local and independent culinary talent. The Indie Food & Wine Festival offers a chance to taste a diverse array of gourmet foods, craft beverages, and fine wines. Meet the artisans, enjoy live music, and participate in tasting workshops.',
     image: 'https://placehold.co/800x450.png',
+    merchandise: [
+      { id: 'm4-1', name: 'Festival Wine Glass', price: '$15.00', image: 'https://placehold.co/300x300.png' },
+      { id: 'm4-2', name: 'Artisanal Cheese Board', price: '$45.00', image: 'https://placehold.co/300x300.png' },
+      { id: 'm4-3', name: 'Festival Apron', price: '$30.00', image: 'https://placehold.co/300x300.png' },
+    ],
   },
-    {
+  {
     id: '5',
     name: 'Shakespeare in the Park: A Midsummer Night\'s Dream',
     date: 'July 12, 2025',
@@ -103,6 +125,17 @@ export const events: Event[] = [
     longDescription: 'Experience the magic of Shakespeare like never before. This production of "A Midsummer Night\'s Dream" is set in an enchanted forest within the park, creating an immersive and unforgettable theatrical experience for all ages.',
     image: 'https://placehold.co/800x450.png',
     seatingMap: createSeatingMap(80),
+    artist: {
+      name: 'The Public Theater',
+      bio: 'The Public Theater is a New York City arts organization founded as the Shakespeare Workshop in 1954 by Joseph Papp.',
+      socials: {
+        website: 'https://publictheater.org/',
+      },
+    },
+    merchandise: [
+      { id: 'm5-1', name: 'Playbill', price: '$10.00', image: 'https://placehold.co/300x300.png' },
+      { id: 'm5-2', name: 'Commemorative Poster', price: '$20.00', image: 'https://placehold.co/300x300.png' },
+    ],
   },
   {
     id: '6',
@@ -114,6 +147,11 @@ export const events: Event[] = [
     longDescription: 'The historic rivalry between the New York Giants and the Philadelphia Eagles heats up once again. Be there to witness every tackle, touchdown, and thrilling moment as these two NFC East powerhouses battle for supremacy.',
     image: 'https://placehold.co/800x450.png',
     seatingMap: createSeatingMap(150),
+    merchandise: [
+      { id: 'm6-1', name: 'Giants Team Jersey', price: '$120.00', image: 'https://placehold.co/300x300.png' },
+      { id: 'm6-2', name: 'Eagles Team Jersey', price: '$120.00', image: 'https://placehold.co/300x300.png' },
+      { id: 'm6-3', name: 'Game Day Foam Finger', price: '$15.00', image: 'https://placehold.co/300x300.png' },
+    ],
   },
   {
     id: '7',
@@ -124,6 +162,10 @@ export const events: Event[] = [
     description: 'The future of technology, unveiled by industry leaders.',
     longDescription: 'Join the brightest minds in tech at the Global Tech Summit. This three-day event features keynotes from visionary leaders, deep-dive workshops on AI, blockchain, and quantum computing, and unparalleled networking opportunities. Discover the trends and innovations shaping our world.',
     image: 'https://placehold.co/800x450.png',
+    merchandise: [
+      { id: 'm7-1', name: 'GTS 2024 Hoodie', price: '$50.00', image: 'https://placehold.co/300x300.png' },
+      { id: 'm7-2', name: 'Smart Notebook', price: '$30.00', image: 'https://placehold.co/300x300.png' },
+    ],
   },
   {
     id: '8',
@@ -134,5 +176,9 @@ export const events: Event[] = [
     description: 'Join thousands of runners in this prestigious annual marathon.',
     longDescription: 'Whether you\'re a seasoned marathoner or a first-timer, the City Marathon offers an incredible experience. The course takes you through historic neighborhoods and scenic landmarks, with cheering crowds supporting you every step of the way. Register to run or come out to support the participants.',
     image: 'https://placehold.co/800x450.png',
+    merchandise: [
+      { id: 'm8-1', name: 'Finisher Medal', price: '$20.00', image: 'https://placehold.co/300x300.png' },
+      { id: 'm8-2', name: 'Official Race T-Shirt', price: '$35.00', image: 'https://placehold.co/300x300.png' },
+    ],
   },
 ];
