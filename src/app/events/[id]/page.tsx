@@ -10,7 +10,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, MapPin, Tag, Ticket, Info, Mic2, Shirt, Link as LinkIcon, ShoppingCart, ArrowDown, Wifi } from 'lucide-react';
-import { useState, useEffect } from 'react';
 import EventChat from '@/components/event-chat';
 import { isEventLive, isEventOver } from '@/lib/utils';
 import TravelPackages from '@/components/travel-packages';
@@ -32,19 +31,13 @@ const socialIcons = {
 
 export default function EventPage({ params: { id } }: EventPageProps) {
   const event = events.find(e => e.id === id);
-  const [live, setLive] = useState(false);
-  const [over, setOver] = useState(false);
-
-  useEffect(() => {
-    if (event) {
-      setLive(isEventLive(event.date));
-      setOver(isEventOver(event.date));
-    }
-  }, [event]);
 
   if (!event) {
     notFound();
   }
+
+  const live = isEventLive(event.date);
+  const over = isEventOver(event.date);
 
   return (
     <div className="bg-background">
