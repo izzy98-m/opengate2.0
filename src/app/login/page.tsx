@@ -10,7 +10,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
-import { LogIn } from 'lucide-react';
+import { LogIn, Crown } from 'lucide-react';
+import { Separator } from '@/components/ui/separator';
 
 const formSchema = z.object({
   email: z.string().email('Please enter a valid email address.'),
@@ -84,6 +85,16 @@ export default function LoginPage() {
                     Sign Up
                   </Link>
                 </p>
+                <div className="flex items-center gap-4">
+                    <Separator className="flex-1"/>
+                    <span className="text-xs text-muted-foreground">OR</span>
+                    <Separator className="flex-1"/>
+                </div>
+                 <Button asChild variant="outline" className="w-full font-semibold">
+                    <Link href="/subscribe">
+                        <Crown className="mr-2 h-4 w-4 text-yellow-500" /> Subscribe Now
+                    </Link>
+                </Button>
             </CardContent>
           </form>
         </Form>
