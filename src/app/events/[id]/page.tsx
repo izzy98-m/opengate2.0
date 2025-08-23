@@ -14,6 +14,7 @@ import { useState, useEffect } from 'react';
 import EventChat from '@/components/event-chat';
 import { isEventLive } from '@/lib/utils';
 import TravelPackages from '@/components/travel-packages';
+import SafetyFeatures from '@/components/safety-features';
 
 interface EventPageProps {
   params: {
@@ -176,6 +177,8 @@ export default function EventPage({ params }: EventPageProps) {
                 </CardContent>
               </Card>
             )}
+
+            <SafetyFeatures />
           </div>
         </div>
       </div>
