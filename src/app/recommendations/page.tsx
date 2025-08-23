@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -83,7 +83,7 @@ export default function RecommendationsPage() {
                                     name="userPreferences"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel>Your Preferences</FormLabel>
+                                            <FormLabel className="cursor-pointer">Your Preferences</FormLabel>
                                             <FormControl>
                                                 <Textarea placeholder="e.g., I love indie music, outdoor festivals, and intimate venues." {...field} />
                                             </FormControl>
@@ -96,7 +96,7 @@ export default function RecommendationsPage() {
                                     name="pastActivity"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel>Past Events You've Enjoyed</FormLabel>
+                                            <FormLabel className="cursor-pointer">Past Events You've Enjoyed</FormLabel>
                                             <FormControl>
                                                 <Textarea placeholder="e.g., Attended the City Folk Festival last year, saw a play at the Grand Theatre." {...field} />
                                             </FormControl>
@@ -109,7 +109,7 @@ export default function RecommendationsPage() {
                                     name="interests"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel>Interests (comma-separated)</FormLabel>
+                                            <FormLabel className="cursor-pointer">Interests (comma-separated)</FormLabel>
                                             <FormControl>
                                                 <Input placeholder="e.g., music, theatre, comedy, sports" {...field} />
                                             </FormControl>
@@ -122,7 +122,7 @@ export default function RecommendationsPage() {
                                     name="location"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel>Your Location</FormLabel>
+                                            <FormLabel className="cursor-pointer">Your Location</FormLabel>
                                             <FormControl>
                                                 <Input placeholder="e.g., New York, NY" {...field} />
                                             </FormControl>
