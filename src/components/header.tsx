@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Ticket, PlusCircle, Crown } from 'lucide-react';
+import { Ticket, PlusCircle, Crown, Wallet } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Header() {
@@ -29,6 +29,11 @@ export default function Header() {
                 </Link>
             </Button>
             <div className="flex items-center space-x-1 sm:space-x-2 pl-4">
+                 <Button variant="ghost" asChild>
+                    <Link href="/wallet">
+                        <Wallet className="mr-2 h-4 w-4" /> Wallet
+                    </Link>
+                 </Button>
                  <Button variant="ghost" asChild>
                     <Link href="/login">Login</Link>
                  </Button>
