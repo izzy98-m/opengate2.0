@@ -171,7 +171,7 @@ export default function EventPage({ params }: EventPageProps) {
                     <Tag className="h-4 w-4 mr-2" />
                     {event.category}
                   </Badge>
-                  <Button asChild size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg">
+                  <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg" asChild>
                     <Link href={`/checkout/${event.id}`}>Buy Tickets</Link>
                   </Button>
                 </CardContent>
@@ -196,3 +196,5 @@ export default function EventPage({ params }: EventPageProps) {
     </div>
   );
 }
+
+    
