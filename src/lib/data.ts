@@ -90,6 +90,18 @@ export const events: Event[] = [
       { id: 'm2-2', name: 'Artisan-Crafted Tote Bag', price: '$40.00', image: 'https://placehold.co/300x300.png' },
       { id: 'm2-3', name: 'Exhibition Catalogue', price: '$60.00', image: 'https://placehold.co/300x300.png' },
     ],
+    travelPackages: {
+        flights: [
+          { id: 'f2-1', type: 'flight', provider: 'American', price: '$180', details: 'Round trip from New York' },
+        ],
+        buses: [
+          { id: 'b2-1', type: 'bus', provider: 'Megabus', price: '$50', details: 'From Indianapolis' },
+        ],
+        hotels: [
+          { id: 'h2-1', name: 'The Peninsula', price: '$500/night', details: 'Luxury stay near the fair', image: 'https://placehold.co/300x200.png' },
+          { id: 'h2-2', name: 'ACME Hotel Company', price: '$250/night', details: 'Stylish and affordable', image: 'https://placehold.co/300x200.png' },
+        ]
+    }
   },
   {
     id: '3',
@@ -112,6 +124,18 @@ export const events: Event[] = [
       { id: 'm3-1', name: '"I\'m a Joke" T-Shirt', price: '$25.00', image: 'https://placehold.co/300x300.png' },
       { id: 'm3-2', name: 'Comedy Gala Mug', price: '$15.00', image: 'https://placehold.co/300x300.png' },
     ],
+    travelPackages: {
+        flights: [
+          { id: 'f3-1', type: 'flight', provider: 'Southwest', price: '$120', details: 'Round trip from Las Vegas' },
+        ],
+        buses: [
+          { id: 'b3-1', type: 'bus', provider: 'FlixBus', price: '$30', details: 'From San Diego' },
+        ],
+        hotels: [
+          { id: 'h3-1', name: 'Hollywood Roosevelt', price: '$400/night', details: 'Historic hotel on the strip', image: 'https://placehold.co/300x200.png' },
+          { id: 'h3-2', name: 'The LINE Hotel', price: '$300/night', details: 'Trendy spot in Koreatown', image: 'https://placehold.co/300x200.png' },
+        ]
+    }
   },
   {
     id: '4',
@@ -127,6 +151,18 @@ export const events: Event[] = [
       { id: 'm4-2', name: 'Artisanal Cheese Board', price: '$45.00', image: 'https://placehold.co/300x300.png' },
       { id: 'm4-3', name: 'Festival Apron', price: '$30.00', image: 'https://placehold.co/300x300.png' },
     ],
+    travelPackages: {
+        flights: [
+          { id: 'f4-1', type: 'flight', provider: 'Spirit', price: '$90', details: 'Round trip from Dallas' },
+        ],
+        buses: [
+          { id: 'b4-1', type: 'bus', provider: 'RedCoach', price: '$40', details: 'From Houston' },
+        ],
+        hotels: [
+          { id: 'h4-1', name: 'South Congress Hotel', price: '$350/night', details: 'In the heart of the action', image: 'https://placehold.co/300x200.png' },
+          { id: 'h4-2', name: 'Hotel San José', price: '$300/night', details: 'Iconic bungalow-style hotel', image: 'https://placehold.co/300x200.png' },
+        ]
+    }
   },
   {
     id: '5',
@@ -149,6 +185,18 @@ export const events: Event[] = [
       { id: 'm5-1', name: 'Playbill', price: '$10.00', image: 'https://placehold.co/300x300.png' },
       { id: 'm5-2', name: 'Commemorative Poster', price: '$20.00', image: 'https://placehold.co/300x300.png' },
     ],
+    travelPackages: {
+        flights: [
+           { id: 'f5-1', type: 'flight', provider: 'JetBlue', price: '$220', details: 'Round trip from Boston' },
+        ],
+        buses: [
+          { id: 'b5-1', type: 'bus', provider: 'Peter Pan', price: '$60', details: 'From Philadelphia' },
+        ],
+        hotels: [
+          { id: 'h5-1', name: 'The Plaza', price: '$800/night', details: 'Iconic luxury near Central Park', image: 'https://placehold.co/300x200.png' },
+          { id: 'h5-2', name: 'Park Lane Hotel', price: '$450/night', details: 'Stunning park views', image: 'https://placehold.co/300x200.png' },
+        ]
+    }
   },
   {
     id: '6',
@@ -165,6 +213,16 @@ export const events: Event[] = [
       { id: 'm6-2', name: 'Eagles Team Jersey', price: '$120.00', image: 'https://placehold.co/300x300.png' },
       { id: 'm6-3', name: 'Game Day Foam Finger', price: '$15.00', image: 'https://placehold.co/300x300.png' },
     ],
+    travelPackages: {
+        flights: [],
+        buses: [
+          { id: 'b6-1', type: 'bus', provider: 'NJ Transit', price: '$30', details: 'From NYC' },
+        ],
+        hotels: [
+          { id: 'h6-1', name: 'Live! Casino & Hotel', price: '$300/night', details: 'Next to the stadium complex', image: 'https://placehold.co/300x200.png' },
+          { id: 'h6-2', name: 'Four Seasons Hotel', price: '$600/night', details: 'Luxury in Center City', image: 'https://placehold.co/300x200.png' },
+        ]
+    }
   },
   {
     id: '7',
@@ -184,7 +242,9 @@ export const events: Event[] = [
         { id: 'f3', type: 'flight', provider: 'Alaska Airlines', price: '$450', details: 'Round trip from New York (JFK)' },
         { id: 'f4', type: 'flight', provider: 'Southwest', price: '$380', details: 'Round trip from Dallas (DAL)' },
       ],
-      buses: [],
+      buses: [
+        { id: 'b7-1', type: 'bus', provider: 'California Shuttle', price: '$70', details: 'From Los Angeles' },
+      ],
       hotels: [
         { id: 'h3', name: 'Hyatt Regency', price: '$400/night', details: 'Connected to conference center', image: 'https://placehold.co/300x200.png' },
         { id: 'h4', name: 'The Clift Royal Sonesta', price: '$320/night', details: '1.0 mile from venue', image: 'https://placehold.co/300x200.png' },
@@ -204,5 +264,17 @@ export const events: Event[] = [
       { id: 'm8-1', name: 'Finisher Medal', price: '$20.00', image: 'https://placehold.co/300x300.png' },
       { id: 'm8-2', name: 'Official Race T-Shirt', price: '$35.00', image: 'https://placehold.co/300x300.png' },
     ],
+    travelPackages: {
+        flights: [
+          { id: 'f8-1', type: 'flight', provider: 'Delta', price: '$150', details: 'Round trip from New York' },
+        ],
+        buses: [
+          { id: 'b8-1', type: 'bus', provider: 'Go Buses', price: '$50', details: 'From Providence' },
+        ],
+        hotels: [
+          { id: 'h8-1', name: 'The Liberty Hotel', price: '$550/night', details: 'A former jail turned luxury hotel', image: 'https://placehold.co/300x200.png' },
+          { id: 'h8-2', name: 'YOTEL Boston', price: '$300/night', details: 'Modern micro-hotel in Seaport', image: 'https://placehold.co/300x200.png' },
+        ]
+    }
   },
 ];
