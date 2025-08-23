@@ -62,6 +62,19 @@ export const events: Event[] = [
       { id: 'm1-2', name: 'Signed Vinyl Record', price: '$75.00', image: 'https://placehold.co/300x300.png' },
       { id: 'm1-3', name: 'Cosmic Gate Beanie', price: '$25.00', image: 'https://placehold.co/300x300.png' },
     ],
+    travelPackages: {
+      flights: [
+        { id: 'f1', type: 'flight', provider: 'Delta', price: '$250', details: 'Round trip from Chicago' },
+        { id: 'f2', type: 'flight', provider: 'United', price: '$280', details: 'Round trip from Miami' },
+      ],
+      buses: [
+        { id: 'b1', type: 'bus', provider: 'Greyhound', price: '$80', details: 'From Philadelphia' },
+      ],
+      hotels: [
+        { id: 'h1', name: 'The Brooklyn Hotel', price: '$200/night', details: '0.5 miles from venue', image: 'https://placehold.co/300x200.png' },
+        { id: 'h2', name: 'Wythe Hotel', price: '$350/night', details: '1.2 miles from venue', image: 'https://placehold.co/300x200.png' },
+      ]
+    }
   },
   {
     id: '2',
@@ -166,6 +179,17 @@ export const events: Event[] = [
       { id: 'm7-1', name: 'GTS 2024 Hoodie', price: '$50.00', image: 'https://placehold.co/300x300.png' },
       { id: 'm7-2', name: 'Smart Notebook', price: '$30.00', image: 'https://placehold.co/300x300.png' },
     ],
+    travelPackages: {
+      flights: [
+        { id: 'f3', type: 'flight', provider: 'Alaska Airlines', price: '$450', details: 'Round trip from New York (JFK)' },
+        { id: 'f4', type: 'flight', provider: 'Southwest', price: '$380', details: 'Round trip from Dallas (DAL)' },
+      ],
+      buses: [],
+      hotels: [
+        { id: 'h3', name: 'Hyatt Regency', price: '$400/night', details: 'Connected to conference center', image: 'https://placehold.co/300x200.png' },
+        { id: 'h4', name: 'The Clift Royal Sonesta', price: '$320/night', details: '1.0 mile from venue', image: 'https://placehold.co/300x200.png' },
+      ]
+    }
   },
   {
     id: '8',

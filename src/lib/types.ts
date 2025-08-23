@@ -30,6 +30,22 @@ export interface MerchandiseItem {
   image: string;
 }
 
+export interface TravelDeal {
+  id: string;
+  type: 'flight' | 'bus';
+  provider: string;
+  price: string;
+  details: string;
+}
+
+export interface HotelDeal {
+  id: string;
+  name: string;
+  price: string;
+  details: string;
+  image: string;
+}
+
 export interface Event {
   id: string;
   name: string;
@@ -42,4 +58,9 @@ export interface Event {
   seatingMap?: SeatingMapData;
   artist?: Artist;
   merchandise?: MerchandiseItem[];
+  travelPackages?: {
+    flights: TravelDeal[];
+    buses: TravelDeal[];
+    hotels: HotelDeal[];
+  };
 }

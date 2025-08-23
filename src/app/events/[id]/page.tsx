@@ -13,6 +13,7 @@ import { Calendar, MapPin, Tag, Ticket, Info, Mic2, Shirt, Link as LinkIcon, Sho
 import { useState, useEffect } from 'react';
 import EventChat from '@/components/event-chat';
 import { isEventLive } from '@/lib/utils';
+import TravelPackages from '@/components/travel-packages';
 
 interface EventPageProps {
   params: {
@@ -138,6 +139,14 @@ export default function EventPage({ params }: EventPageProps) {
                 </Card>
             )}
 
+            {event.travelPackages && (
+              <TravelPackages 
+                flights={event.travelPackages.flights}
+                hotels={event.travelPackages.hotels}
+                buses={event.travelPackages.buses}
+              />
+            )}
+
           </div>
 
           <div className="space-y-8">
@@ -173,4 +182,3 @@ export default function EventPage({ params }: EventPageProps) {
     </div>
   );
 }
-
