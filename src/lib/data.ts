@@ -1,5 +1,5 @@
 
-import type { Event, SeatingMapData } from './types';
+import type { Event, SeatingMapData, PostEventContentData } from './types';
 
 function createSeatingMap(takenSeats: number = 20): SeatingMapData {
   const sections = [
@@ -33,6 +33,19 @@ function createSeatingMap(takenSeats: number = 20): SeatingMapData {
       }),
     })),
   };
+}
+
+const samplePostEventContent: PostEventContentData = {
+    photos: [
+        { id: 'p1', url: 'https://placehold.co/600x400.png', caption: 'The crowd was electric!' },
+        { id: 'p2', url: 'https://placehold.co/600x400.png', caption: 'An amazing performance.' },
+        { id: 'p3', url: 'https://placehold.co/600x400.png', caption: 'Lights and sounds.' },
+        { id: 'p4', url: 'https://placehold.co/600x400.png', caption: 'Unforgettable moments.' },
+    ],
+    videos: [
+        { id: 'v1', url: 'https://www.youtube.com/embed/dQw4w9WgXcQ', title: 'Highlight Reel' },
+        { id: 'v2', url: 'https://www.youtube.com/embed/dQw4w9WgXcQ', title: 'Full Set Replay' },
+    ]
 }
 
 
@@ -74,7 +87,7 @@ export const events: Event[] = [
         { id: 'h1', name: 'The Brooklyn Hotel', price: '$200/night', details: '0.5 miles from venue', image: 'https://placehold.co/300x200.png' },
         { id: 'h2', name: 'Wythe Hotel', price: '$350/night', details: '1.2 miles from venue', image: 'https://placehold.co/300x200.png' },
       ]
-    }
+    },
   },
   {
     id: '2',
@@ -167,7 +180,7 @@ export const events: Event[] = [
   {
     id: '5',
     name: 'Shakespeare in the Park: A Midsummer Night\'s Dream',
-    date: 'July 12, 2025',
+    date: 'July 12, 2024',
     location: 'New York, NY',
     category: 'theatre',
     description: 'A classic play reimagined under the stars.',
@@ -196,7 +209,8 @@ export const events: Event[] = [
           { id: 'h5-1', name: 'The Plaza', price: '$800/night', details: 'Iconic luxury near Central Park', image: 'https://placehold.co/300x200.png' },
           { id: 'h5-2', name: 'Park Lane Hotel', price: '$450/night', details: 'Stunning park views', image: 'https://placehold.co/300x200.png' },
         ]
-    }
+    },
+    postEventContent: samplePostEventContent
   },
   {
     id: '6',
@@ -249,7 +263,8 @@ export const events: Event[] = [
         { id: 'h3', name: 'Hyatt Regency', price: '$400/night', details: 'Connected to conference center', image: 'https://placehold.co/300x200.png' },
         { id: 'h4', name: 'The Clift Royal Sonesta', price: '$320/night', details: '1.0 mile from venue', image: 'https://placehold.co/300x200.png' },
       ]
-    }
+    },
+    postEventContent: samplePostEventContent
   },
   {
     id: '8',

@@ -46,6 +46,23 @@ export interface HotelDeal {
   image: string;
 }
 
+export interface PostEventPhoto {
+    id: string;
+    url: string;
+    caption: string;
+}
+
+export interface PostEventVideo {
+    id: string;
+    url: string;
+    title: string;
+}
+
+export interface PostEventContentData {
+    photos: PostEventPhoto[];
+    videos: PostEventVideo[];
+}
+
 export interface Event {
   id: string;
   name: string;
@@ -63,4 +80,5 @@ export interface Event {
     buses: TravelDeal[];
     hotels: HotelDeal[];
   };
+  postEventContent?: PostEventContentData;
 }
