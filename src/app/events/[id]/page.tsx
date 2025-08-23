@@ -1,3 +1,6 @@
+
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -6,7 +9,10 @@ import SeatingMap from '@/components/seating-map';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, MapPin, Tag, Ticket, Info, Mic2, Shirt, Link as LinkIcon, ShoppingCart, ArrowDown } from 'lucide-react';
+import { Calendar, MapPin, Tag, Ticket, Info, Mic2, Shirt, Link as LinkIcon, ShoppingCart, ArrowDown, Wifi } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import EventChat from '@/components/event-chat';
+import { isEventLive } from '@/lib/utils';
 
 interface EventPageProps {
   params: {
@@ -23,6 +29,13 @@ const socialIcons = {
 
 export default function EventPage({ params }: EventPageProps) {
   const event = events.find(e => e.id === params.id);
+  const [live, setLive] = useState(false);
+
+  useEffect(() => {
+    if (event) {
+      setLive(isEventLive(event.date));
+    }
+  }, [event]);
 
   if (!event) {
     notFound();
@@ -55,6 +68,12 @@ export default function EventPage({ params }: EventPageProps) {
                     <MapPin className="h-5 w-5 text-primary" />
                     <span>{event.location}</span>
                   </div>
+                   {live && (
+                    <div className="flex items-center gap-2 text-primary font-semibold">
+                      <Wifi className="h-5 w-5" />
+                      <span>Event is Live</span>
+                    </div>
+                  )}
                 </div>
                 <div>
                   <h2 className="text-xl font-bold mb-2">About this event</h2>
@@ -78,6 +97,8 @@ export default function EventPage({ params }: EventPageProps) {
                 </div>
               </CardContent>
             </Card>
+
+            {live && <EventChat />}
 
             {event.artist && (
               <Card className="shadow-lg" id="artist-info">
@@ -152,3 +173,4 @@ export default function EventPage({ params }: EventPageProps) {
     </div>
   );
 }
+
