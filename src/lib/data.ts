@@ -8,23 +8,18 @@ function createSeatingMap(takenSeats: number = 20): SeatingMapData {
     { name: 'Balcony', rows: 6 },
   ];
 
-  let totalSeats = 0;
-  sections.forEach(s => totalSeats += s.rows * 10);
-  
-  const takenSeatSet = new Set<number>();
-  while (takenSeatSet.size < takenSeats) {
-    takenSeatSet.add(Math.floor(Math.random() * totalSeats));
-  }
-  
-  const takenSeatArray = Array.from(takenSeatSet);
-
   let seatCounter = 0;
+  let takenCounter = 0;
   return {
-    sections: sections.map(section => ({
+    sections: sections.map((section, sectionIndex) => ({
       name: section.name,
       seats: Array.from({ length: section.rows * 10 }, (_, i) => {
         const seatId = `${section.name.charAt(0)}${Math.floor(i / 10) + 1}-${(i % 10) + 1}`;
-        const isTaken = takenSeatArray.includes(seatCounter);
+        // Replace Math.random() with a deterministic approach
+        const isTaken = (seatCounter + sectionIndex) % (Math.floor( (section.rows * 10) / (takenSeats / sections.length) ) + 2 ) === 0 && takenCounter < takenSeats;
+        if (isTaken) {
+            takenCounter++;
+        }
         seatCounter++;
         return {
           id: seatId,
@@ -293,3 +288,5 @@ export const events: Event[] = [
     }
   },
 ];
+
+    
