@@ -191,3 +191,4 @@ export default function EventPage({ params: { id } }: EventPageProps) {
 }
 
     
+    
