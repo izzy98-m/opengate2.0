@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Ticket } from 'lucide-react';
+import { Ticket, PlusCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Header() {
@@ -20,6 +20,17 @@ export default function Header() {
             <Button variant="ghost" asChild>
               <Link href="/recommendations">Recommendations</Link>
             </Button>
+            <Button variant="outline" asChild>
+              <Link href="/create-event"><PlusCircle className="mr-2 h-4 w-4"/>Create Event</Link>
+            </Button>
+            <div className="flex items-center space-x-1 sm:space-x-2 pl-4">
+                 <Button variant="ghost" asChild>
+                    <Link href="/login">Login</Link>
+                 </Button>
+                 <Button asChild>
+                    <Link href="/signup">Sign Up</Link>
+                 </Button>
+            </div>
           </div>
         </div>
       </nav>
